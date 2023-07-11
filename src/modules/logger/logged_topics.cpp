@@ -197,6 +197,10 @@ void LoggedTopics::add_default_topics()
 		add_topic_multi("vehicle_torque_setpoint", 0, 2);
 	}
 
+	//jspa778: additional setpoint logging topics
+	add_topic_multi("vehicle_attitude_setpoint", 0, 1);
+	add_topic_multi("vehicle_rates_setpoint", 0, 1);
+
 	// SYS_HITL: default ground truth logging for simulation
 	int32_t sys_hitl = 0;
 	param_get(param_find("SYS_HITL"), &sys_hitl);
