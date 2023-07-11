@@ -201,6 +201,8 @@ void LoggedTopics::add_default_topics()
 	add_topic_multi("vehicle_attitude_setpoint", 0, 1);
 	add_topic_multi("vehicle_rates_setpoint", 0, 1);
 
+	add_topic_multi("rc_channels", 20, 1);
+
 	// SYS_HITL: default ground truth logging for simulation
 	int32_t sys_hitl = 0;
 	param_get(param_find("SYS_HITL"), &sys_hitl);
